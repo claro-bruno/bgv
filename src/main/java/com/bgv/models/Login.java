@@ -1,4 +1,4 @@
-package com.Bgv.models;
+package com.bgv.models;
 
 public class Login {
     private String name;

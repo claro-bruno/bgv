@@ -16,9 +16,10 @@
     flex-grow:1;
   }
 
+  .welcome {
+      float: right;
+      padding: 20px;
+  }
+
 
 </style>
-
-<div align="right">
-    Welcome ${name}
-</div>

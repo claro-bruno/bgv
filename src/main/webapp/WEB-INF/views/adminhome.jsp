@@ -1,6 +1,7 @@
+
 <%@ include file="common/header.jspf"%>
 
-
+<%@ include file="common/welcome.jsp"%>
 <div class="flex-container">
 
     <div class="left">
@@ -8,10 +9,11 @@
     </div>
     <div class="right">
         <h2>Requests Pending for approval</h2>
-        <div id="errors">
-            ${errorMessage}
+        <div id="errorMsg">
+            ${error.message}
         </div>
         <table class="table table-striped">
+            <caption>Requests Pending for approval</caption>
             <thead>
             <tr>
                 <th>Request Number</th>

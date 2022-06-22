@@ -11,9 +11,10 @@
        http://www.springframework.org/schema/mvc
         http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
-    <!-- FIXME    Change name of the package to your base-package -->
-    <context:component-scan base-package="com.Bgv"/>
+
+    <context:component-scan base-package="com.bgv"/>
     <mvc:annotation-driven/>
+
     <mvc:resources mapping="/webjars/**" location="/webjars/"/>
 
 
@@ -22,11 +23,6 @@
         <property name="suffix" value=".jsp" />
     </bean>
 
-<!--    <bean id="messageSource"-->
-<!--          class="org.springframework.context.support.ReloadableResourceBundleMessageSource">-->
-<!--        <property name="basename" value="classpath:messages" />-->
-<!--        <property name="defaultEncoding" value="UTF-8" />-->
-<!--    </bean>-->
 
 
 </beans>

@@ -1,7 +1,7 @@
-package com.Bgv.login.services;
+package com.bgv.main.services;
 
 import org.springframework.stereotype.Service;
-import com.Bgv.models.Login;
+import com.bgv.models.Login;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +10,7 @@ import java.util.Objects;
 @Service
 public class LoginService {
 
-    private static List<Login> logins = new ArrayList<Login>();
+    private static final List<Login> logins = new ArrayList<>();
 
 
     static {

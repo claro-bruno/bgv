@@ -1,17 +1,18 @@
 <%@ include file="common/header.jspf"%>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
+<%@ include file="common/welcome.jsp"%>
 <div class="flex-container">
     <div class="left">
         <%@ include file="common/navigation.jspf"%>
     </div>
     <div class="right">
         <h2>My Requests</h2>
-        <div id="errors">
-            ${errorMessage}
+        <div id="errorMsg">
+            ${error.message}
         </div>
         <table class="table table-striped">
+            <caption>My Requests</caption>
             <thead>
             <tr>
                 <th>Request Number</th>
@@ -28,7 +29,7 @@
                                                                        value="${request.submittedDate}" /></label></td>
                     <td><label id="empName${request.id}">${request.status}</label></td>
                     <td>
-                        <a id="edit${request.id}" type="button" class="btn btn-primary" href="editRequest?id=${request.id}">Edit</a>
+                        <a id="edit${request.id}" type="button" class="btn btn-primary" href="editrequest?id=${request.id}">Edit</a>
                     </td>
                 </tr>
             </c:forEach>

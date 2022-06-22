@@ -1,54 +1,53 @@
-package com.Bgv.models;
+package com.bgv.models;
 
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 public class Request {
     private Integer id;
+
     private String employeeId;
+
     private Date submittedDate;
+
     private String status;
+
     private String employeeName;
 
+
     private String companyName1;
+
     private Date doj1;
+
     private Date lastwd1;
-    private String adress1;
+
+    private String address1;
+
 
     private String companyName2;
+
     private Date doj2;
+
     private Date lastwd2;
-    private String adress2;
+
+    private String address2;
 
     private String hdegree;
+
     private String college;
+
     private Integer passedOutYear;
 
     private String remarks;
 
-//    private List<Company> companies = new ArrayList<>();
-//    private Educational educational;
-
     public Request() {}
 
-    public Request(Integer id, String employeeId, String employeeName, Date submittedDate, String status, String companyName1, Date doj1, Date lastwd1, String adress1, String companyName2, Date doj2, Date lastwd2, String adress2, String hdegree, String college, Integer passedOutYear) {
+    public Request(Integer id, String employeeId, String employeeName, Date submittedDate, String status, String remarks ) {
         this.id = id;
         this.employeeId = employeeId;
         this.employeeName = employeeName;
         this.submittedDate = submittedDate;
         this.status = status;
-        this.companyName1 = companyName1;
-        this.doj1 = doj1;
-        this.lastwd1 = lastwd1;
-        this.adress1 = adress1;
-        this.companyName2 = companyName2;
-        this.doj2 = doj2;
-        this.lastwd2 = lastwd2;
-        this.adress2 = adress2;
-        this.hdegree = hdegree;
-        this.college = college;
-        this.passedOutYear = passedOutYear;
+        this.remarks = remarks;
     }
 
 
@@ -84,25 +83,6 @@ public class Request {
         this.status = status;
     }
 
-//    public List<Company> getCompanies() {
-//        return companies;
-//    }
-//
-//    public void addCompany(Company company) {
-//        companies.add(company);
-//    }
-//
-//    public void removeCompany(Company company) {
-//        companies.remove(company);
-//    }
-//
-//    public Educational getEducational() {
-//        return educational;
-//    }
-//
-//    public void setEducational(Educational educational) {
-//        this.educational = educational;
-//    }
 
     @Override
     public boolean equals(Object o) {
@@ -114,6 +94,25 @@ public class Request {
         return getEmployeeId().equals(request.getEmployeeId());
     }
 
+    public void setEmpresa1(String companyName1, Date doj1, Date lastwd1, String address1) {
+        this.companyName1 = companyName1;
+        this.doj1 = doj1;
+        this.lastwd1 = lastwd1;
+        this.address1 = address1;
+    }
+
+    public void setEmpresa2(String companyName2, Date doj2, Date lastwd2, String address2) {
+        this.companyName2 = companyName2;
+        this.doj2 = doj2;
+        this.lastwd2 = lastwd2;
+        this.address2 = address2;
+    }
+
+    public void setEducacional(String hdegree, String college, Integer passedOutYear) {
+        this.hdegree = hdegree;
+        this.college = college;
+        this.passedOutYear = passedOutYear;
+    }
     @Override
     public int hashCode() {
         return getEmployeeId().hashCode();
@@ -151,12 +150,12 @@ public class Request {
         this.lastwd1 = lastwd1;
     }
 
-    public String getAdress1() {
-        return adress1;
+    public String getAddress1() {
+        return address1;
     }
 
-    public void setAdress1(String adress1) {
-        this.adress1 = adress1;
+    public void setAddress1(String address1) {
+        this.address1 = address1;
     }
 
     public String getCompanyName2() {
@@ -183,12 +182,12 @@ public class Request {
         this.lastwd2 = lastwd2;
     }
 
-    public String getAdress2() {
-        return adress2;
+    public String getAddress2() {
+        return address2;
     }
 
-    public void setAdress2(String adress2) {
-        this.adress2 = adress2;
+    public void setAddress2(String address2) {
+        this.address2 = address2;
     }
 
     public String getHdegree() {
